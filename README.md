@@ -6,7 +6,7 @@ DepMat will check the current versions of the git repositories, and update to th
 
 ## Typical usage
 
-Typically you might call `DepMatUpdate` whenever your Matlab program runs
+Typically you might call `DepMatUpdate()` whenever your Matlab program runs
 
 ```
 DepMatUpdate(repoList);
@@ -14,13 +14,13 @@ DepMatUpdate(repoList);
 
 where `repoList` is an array of `DepMatRepo` objects, each of which defines a repository on which your code depends.
 
-An example function `TestRepoList` is provided, which generates an example list of repositories:
+An example function `TestRepoList()` is provided, which generates an example list of repositories:
 
 ```
-DepMatUpdate(TestRepoList);
+DepMatUpdate(TestRepoList());
 ````
 
-You can substitute in your own function `MyRepoList`:
+You can substitute in your own function `MyRepoList()`:
 
 ```
 function repos = MyRepoList()
@@ -35,7 +35,7 @@ end
 This will the check out and keep up to date the repository `apple` with URL `https://github.com/yourdomain/apple.git` on branch `main`, in a directory called 'apple_main' and so on.
 
 
-## Copyright
+## Copyright
 
 Copyright 2015 Tom Doel
 
